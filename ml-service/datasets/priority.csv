@@ -1,0 +1,25 @@
+category,severity,repeated_reports,location_sensitivity,priority
+Garbage,1,1,0,Low
+Garbage,2,2,0,Medium
+Garbage,3,5,1,High
+Garbage,3,8,1,High
+Road Damage,1,1,0,Low
+Road Damage,2,2,0,Medium
+Road Damage,3,4,1,High
+Road Damage,3,7,1,High
+Water,1,1,0,Low
+Water,2,2,0,Medium
+Water,3,4,1,High
+Water,3,8,1,High
+Drainage,1,1,0,Low
+Drainage,2,2,0,Medium
+Drainage,3,5,1,High
+Drainage,3,9,1,High
+Electricity,1,1,0,Low
+Electricity,2,2,0,Medium
+Electricity,3,4,1,High
+Electricity,3,8,1,High
+Other,1,1,0,Low
+Other,2,2,0,Medium
+Other,3,5,1,High
+Other,3,7,1,High
