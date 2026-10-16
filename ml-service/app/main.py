@@ -4,6 +4,7 @@ import joblib
 import pandas as pd
 
 from app.services.duplicate_service import is_duplicate
+from app.services.hotspot_service import detect_hotspots
 
 
 app = FastAPI(
@@ -41,6 +42,18 @@ class DuplicateRequest(BaseModel):
     existing_descriptions: list[str]
 
 
+class HotspotComplaint(BaseModel):
+    id: str
+    latitude: float
+    longitude: float
+
+
+class HotspotRequest(BaseModel):
+    complaints: list[HotspotComplaint]
+    eps_meters: float = 100
+    min_samples: int = 5
+
+
 @app.get("/")
 def home():
     return {
@@ -58,10 +71,14 @@ def health():
 
 
 @app.post("/predict/category")
-def predict_category(request: ComplaintRequest):
+def predict_category(
+    request: ComplaintRequest
+):
     text = [request.description]
 
-    text_tfidf = tfidf_vectorizer.transform(text)
+    text_tfidf = (
+        tfidf_vectorizer.transform(text)
+    )
 
     prediction = category_model.predict(
         text_tfidf
@@ -73,10 +90,10 @@ def predict_category(request: ComplaintRequest):
     }
 
 
+
 @app.post("/predict/priority")
 def predict_priority(request: PriorityRequest):
-
-    data = pd.DataFrame([
+    input_data = pd.DataFrame([
         {
             "category": request.category,
             "severity": request.severity,
@@ -85,17 +102,19 @@ def predict_priority(request: PriorityRequest):
         }
     ])
 
-    prediction = priority_model.predict(data)[0]
+    prediction = priority_model.predict(input_data)[0]
 
     return {
         "success": True,
-        "priority": prediction
+        "priority": str(prediction)
     }
 
 
-@app.post("/predict/duplicate")
-def predict_duplicate(request: DuplicateRequest):
 
+@app.post("/predict/duplicate")
+def predict_duplicate(
+    request: DuplicateRequest
+):
     result = is_duplicate(
         request.description,
         request.existing_descriptions
@@ -103,7 +122,37 @@ def predict_duplicate(request: DuplicateRequest):
 
     return {
         "success": True,
-        "is_duplicate": result["is_duplicate"],
-        "similarity": result["similarity"],
-        "matched_index": result["matched_index"]
+        "is_duplicate":
+            result["is_duplicate"],
+        "similarity":
+            result["similarity"],
+        "matched_index":
+            result["matched_index"]
+    }
+
+
+@app.post("/predict/hotspots")
+def predict_hotspots(
+    request: HotspotRequest
+):
+    complaints = [
+        {
+            "_id": complaint.id,
+            "latitude": complaint.latitude,
+            "longitude": complaint.longitude
+        }
+        for complaint in request.complaints
+    ]
+
+
+    hotspots = detect_hotspots(
+        complaints,
+        eps_meters=request.eps_meters,
+        min_samples=request.min_samples
+    )
+
+
+    return {
+        "success": True,
+        "hotspots": hotspots
     }

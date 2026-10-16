@@ -1,0 +1,6 @@
+category,severity,repeated_reports,location_sensitivity,priority
+Garbage,1,1,0,Low
+Road Damage,3,5,1,High
+Water,2,3,1,Medium
+Drainage,3,4,1,High
+Electricity,2,1,0,Medium

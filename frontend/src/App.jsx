@@ -1,12 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom"
+
 import Navbar from "./components/Navbar"
 import ProtectedRoute from "./components/ProtectedRoute"
+import AuthorityRoute from "./components/AuthorityRoute"
+
 import { AuthProvider } from "./context/AuthContext"
 
+import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import ReportIssue from "./pages/ReportIssue"
 import MyComplaints from "./pages/MyComplaints"
+import AuthorityDashboard from "./pages/AuthorityDashboard"
 
 function App() {
   return (
@@ -15,25 +24,11 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route
-            path="/"
-            element={
-              <main>
-                <h1>Smart Community Issue Intelligence Platform</h1>
-                <p>Welcome to Smart Civic.</p>
-              </main>
-            }
-          />
+          <Route path="/" element={<Home />} />
 
-          <Route
-            path="/login"
-            element={<Login />}
-          />
+          <Route path="/login" element={<Login />} />
 
-          <Route
-            path="/register"
-            element={<Register />}
-          />
+          <Route path="/register" element={<Register />} />
 
           <Route
             path="/report"
@@ -50,6 +45,15 @@ function App() {
               <ProtectedRoute>
                 <MyComplaints />
               </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/authority"
+            element={
+              <AuthorityRoute>
+                <AuthorityDashboard />
+              </AuthorityRoute>
             }
           />
         </Routes>
