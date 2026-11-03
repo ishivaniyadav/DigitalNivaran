@@ -8,7 +8,7 @@ const Complaint = require("./models/Complaint")
 
 const complaints = [
   {
-    description: "SEED: Garbage is overflowing near the main community gate and has not been collected for several days.",
+    description: "Garbage is overflowing near the main community gate and has not been collected for several days.",
     category: "Garbage",
     location: "Surajpur Main Gate",
     latitude: 28.45610,
@@ -19,7 +19,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: Large garbage pile has accumulated beside the residential road and is causing a bad smell.",
+    description: "Large garbage pile has accumulated beside the residential road and is causing a bad smell.",
     category: "Garbage",
     location: "Surajpur Residential Road",
     latitude: 28.45620,
@@ -30,7 +30,7 @@ const complaints = [
     status: "In Progress"
   },
   {
-    description: "SEED: Waste bins are overflowing near the market and waste has spread onto the road.",
+    description: "Waste bins are overflowing near the market and waste has spread onto the road.",
     category: "Garbage",
     location: "Surajpur Market",
     latitude: 28.45630,
@@ -41,7 +41,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: Uncollected household waste is creating an unhygienic area near the bus stop.",
+    description: "Uncollected household waste is creating an unhygienic area near the bus stop.",
     category: "Garbage",
     location: "Surajpur Bus Stop",
     latitude: 28.45625,
@@ -52,7 +52,7 @@ const complaints = [
     status: "Resolved"
   },
   {
-    description: "SEED: Garbage has been dumped beside the drainage channel and is blocking access for cleaning.",
+    description: "Garbage has been dumped beside the drainage channel and is blocking access for cleaning.",
     category: "Garbage",
     location: "Surajpur Drain Road",
     latitude: 28.45615,
@@ -63,7 +63,7 @@ const complaints = [
     status: "Resolved"
   },
   {
-    description: "SEED: A deep pothole has developed in the middle of the road and is dangerous for two-wheelers.",
+    description: "A deep pothole has developed in the middle of the road and is dangerous for two-wheelers.",
     category: "Road Damage",
     location: "Surajpur Road",
     latitude: 28.45780,
@@ -74,7 +74,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: Several cracks and damaged sections are visible on the road near the school.",
+    description: "Several cracks and damaged sections are visible on the road near the school.",
     category: "Road Damage",
     location: "School Road, Surajpur",
     latitude: 28.45910,
@@ -85,7 +85,7 @@ const complaints = [
     status: "In Progress"
   },
   {
-    description: "SEED: Road surface has broken near the intersection and vehicles are having difficulty passing.",
+    description: "Road surface has broken near the intersection and vehicles are having difficulty passing.",
     category: "Road Damage",
     location: "Surajpur Intersection",
     latitude: 28.46100,
@@ -96,7 +96,7 @@ const complaints = [
     status: "Resolved"
   },
   {
-    description: "SEED: Water is leaking continuously from a damaged pipeline beside the residential lane.",
+    description: "Water is leaking continuously from a damaged pipeline beside the residential lane.",
     category: "Water",
     location: "Surajpur Residential Lane",
     latitude: 28.46220,
@@ -107,7 +107,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: Clean water is being wasted because of a leaking public water connection.",
+    description: "Clean water is being wasted because of a leaking public water connection.",
     category: "Water",
     location: "Surajpur Sector Road",
     latitude: 28.46310,
@@ -118,7 +118,7 @@ const complaints = [
     status: "In Progress"
   },
   {
-    description: "SEED: Drain is blocked and dirty water has started collecting outside nearby houses.",
+    description: "Drain is blocked and dirty water has started collecting outside nearby houses.",
     category: "Drainage",
     location: "Surajpur Housing Area",
     latitude: 28.46400,
@@ -129,7 +129,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: Drainage overflow has caused waterlogging near the street corner after rainfall.",
+    description: "Drainage overflow has caused waterlogging near the street corner after rainfall.",
     category: "Drainage",
     location: "Surajpur Street Corner",
     latitude: 28.46520,
@@ -140,7 +140,7 @@ const complaints = [
     status: "Resolved"
   },
   {
-    description: "SEED: Streetlight is not working near the pedestrian crossing, making the area poorly lit at night.",
+    description: "Streetlight is not working near the pedestrian crossing, making the area poorly lit at night.",
     category: "Electricity",
     location: "Surajpur Pedestrian Crossing",
     latitude: 28.46610,
@@ -151,7 +151,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: Two streetlights have stopped working along the main road.",
+    description: "Two streetlights have stopped working along the main road.",
     category: "Electricity",
     location: "Surajpur Main Road",
     latitude: 28.46700,
@@ -162,7 +162,7 @@ const complaints = [
     status: "In Progress"
   },
   {
-    description: "SEED: Damaged electrical streetlight pole has been reported near the park entrance.",
+    description: "Damaged electrical streetlight pole has been reported near the park entrance.",
     category: "Electricity",
     location: "Surajpur Park",
     latitude: 28.46810,
@@ -173,7 +173,7 @@ const complaints = [
     status: "Resolved"
   },
   {
-    description: "SEED: Public footpath is damaged and tiles are missing near the community centre.",
+    description: "Public footpath is damaged and tiles are missing near the community centre.",
     category: "Other",
     location: "Surajpur Community Centre",
     latitude: 28.46900,
@@ -184,7 +184,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: Roadside signboard has fallen and is obstructing part of the pedestrian path.",
+    description: "Roadside signboard has fallen and is obstructing part of the pedestrian path.",
     category: "Other",
     location: "Surajpur Service Road",
     latitude: 28.47010,
@@ -195,7 +195,7 @@ const complaints = [
     status: "Resolved"
   },
   {
-    description: "SEED: The same overflowing garbage problem has been reported again near the main community gate.",
+    description: "The same overflowing garbage problem has been reported again near the main community gate.",
     category: "Garbage",
     location: "Surajpur Main Gate",
     latitude: 28.45612,
@@ -206,7 +206,7 @@ const complaints = [
     status: "Reopened"
   },
   {
-    description: "SEED: Another report has been submitted for the garbage pile beside the residential road.",
+    description: "Another report has been submitted for the garbage pile beside the residential road.",
     category: "Garbage",
     location: "Surajpur Residential Road",
     latitude: 28.45622,
@@ -217,7 +217,7 @@ const complaints = [
     status: "Pending"
   },
   {
-    description: "SEED: A small damaged road section has been noticed near the local park.",
+    description: "A small damaged road section has been noticed near the local park.",
     category: "Road Damage",
     location: "Surajpur Park Road",
     latitude: 28.47120,
