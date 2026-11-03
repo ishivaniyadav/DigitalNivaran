@@ -3,9 +3,9 @@
 
 A smart civic grievance management platform that uses Machine Learning to classify complaints, detect duplicate reports, assess issue priorities, and identify geographical hotspots.
 
-<img width="1843" height="873" alt="Image" src="https://drive.google.com/file/d/1KPaw6tfag638-tEL5J2_lBnM3vSP4Ne6/view?usp=drive_link" />
+<img width="1843" height="873" alt="Screenshot 2026-11-03 150919" src="https://github.com/user-attachments/assets/b6960756-60c8-4dcb-9f10-9163e9f5874d" />
 
-<img width="1831" height="871" alt="Image" src="https://drive.google.com/file/d/1tqy9Y5MArlaVUFJcVufV7SWxADk23if4/view?usp=drive_link" />
+<img width="1831" height="871" alt="Screenshot 2026-11-03 151026" src="https://github.com/user-attachments/assets/ed87d18b-c817-4c4c-90f1-77b3647bb438" />
 
 ## 🛠️ Tech Stack
 
