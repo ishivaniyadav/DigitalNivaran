@@ -2,8 +2,7 @@
 const axios = require("axios")
 const FormData = require("form-data")
 
-const ML_SERVICE_URL =
-  process.env.ML_SERVICE_URL || "http://localhost:8000"
+const ML_SERVICE_URL =process.env.ML_SERVICE_URL
 
 const predictCategory = async (description) => {
   const response = await axios.post(
