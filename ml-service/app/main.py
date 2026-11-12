@@ -1,3 +1,4 @@
+from pathlib import Path
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
@@ -13,18 +14,20 @@ app = FastAPI(
 )
 
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_DIR = BASE_DIR / "saved_models"
+
 category_model = joblib.load(
-    "saved_models/category_model.pkl"
+    MODEL_DIR / "category_model.pkl"
 )
 
 tfidf_vectorizer = joblib.load(
-    "saved_models/tfidf_vectorizer.pkl"
+    MODEL_DIR / "tfidf_vectorizer.pkl"
 )
 
 priority_model = joblib.load(
-    "saved_models/priority_model.pkl"
+    MODEL_DIR / "priority_model.pkl"
 )
-
 
 class ComplaintRequest(BaseModel):
     description: str

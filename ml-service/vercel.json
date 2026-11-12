@@ -1,0 +1,9 @@
+
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "index.py": {
+      "excludeFiles": "{datasets/**,evaluation/**,app/train_model.py,app/train_priority.py,app/evaluate_model.py}"
+    }
+  }
+}
